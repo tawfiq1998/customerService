@@ -1,4 +1,4 @@
-package com.example.digitinary.service.kafka.request;
+package com.example.digitinary.kafka.request;
 
 import com.example.digitinary.entity.enums.AccountStatus;
 import com.example.digitinary.entity.enums.AccountType;
@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 @ToString
 public class CreateAccountRequestDTO {
     private String customerUUID;
+    private String customerId;
     private AccountType accountType;
     private BigDecimal balance;
     private String createdBy;

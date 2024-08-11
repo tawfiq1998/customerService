@@ -7,7 +7,7 @@ import com.example.digitinary.dto.response.GetCustomerFilterResponseDTO;
 import com.example.digitinary.dto.response.GetCustomersResponseDTO;
 import com.example.digitinary.entity.enums.CustomerStatus;
 import com.example.digitinary.filterRelated.PagingAbstractResponse;
-import com.example.digitinary.service.kafka.request.CreateAccountRequestDTO;
+import com.example.digitinary.kafka.request.CreateAccountRequestDTO;
 
 import java.util.List;
 import java.util.Optional;

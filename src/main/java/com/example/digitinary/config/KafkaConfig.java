@@ -1,7 +1,7 @@
 package com.example.digitinary.config;
 
-import com.example.digitinary.service.kafka.EventConsumer;
-import com.example.digitinary.service.kafka.request.CreateAccountRequestDTO;
+import com.example.digitinary.kafka.EventConsumer;
+import com.example.digitinary.kafka.EventProducer;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -30,6 +30,7 @@ public class KafkaConfig {
     public NewTopic accountTopic() {
         return TopicBuilder.name("Account").build();
     }
+
     @Bean
     public NewTopic customerTopic() {
         return TopicBuilder.name("Customer").build();
@@ -79,5 +80,11 @@ public class KafkaConfig {
     @Bean
     public EventConsumer eventConsumer() {
         return new EventConsumer();
+    }
+
+
+    @Bean
+    public EventProducer eventProducer(KafkaTemplate<String, String> kafkaTemplate) {
+        return new EventProducer(kafkaTemplate);
     }
 }

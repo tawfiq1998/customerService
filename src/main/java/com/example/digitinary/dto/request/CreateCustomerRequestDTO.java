@@ -1,6 +1,6 @@
 package com.example.digitinary.dto.request;
 
-import com.example.digitinary.service.kafka.request.CreateAccountRequestDTO;
+import com.example.digitinary.kafka.request.CreateAccountRequestDTO;
 import lombok.*;
 
 

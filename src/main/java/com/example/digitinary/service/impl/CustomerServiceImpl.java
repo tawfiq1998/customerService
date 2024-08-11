@@ -13,10 +13,9 @@ import com.example.digitinary.filterRelated.FilterRepository;
 import com.example.digitinary.filterRelated.PagingAbstractResponse;
 import com.example.digitinary.repository.CustomerRepository;
 import com.example.digitinary.service.CustomerService;
-import com.example.digitinary.service.kafka.EventProducer;
-import com.example.digitinary.service.kafka.request.CreateAccountRequestDTO;
+import com.example.digitinary.kafka.EventProducer;
+import com.example.digitinary.kafka.request.CreateAccountRequestDTO;
 import com.example.digitinary.service.mapper.CustomerMapper;
-import com.example.digitinary.util.ResponseMessage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -24,14 +23,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

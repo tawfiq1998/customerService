@@ -2,6 +2,7 @@ package com.example.digitinary.service.kafka.request;
 
 import com.example.digitinary.entity.enums.AccountStatus;
 import com.example.digitinary.entity.enums.AccountType;
+import com.example.digitinary.kafka.request.CreateAccountRequestDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
